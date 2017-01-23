@@ -1,0 +1,38 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[german,ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{titling}
+
+\input{meta.tex}
+
+% Header
+\pagestyle{fancy}
+\rhead{\includegraphics[height=0.8cm]{Emblem.pdf}}
+\lhead{Leipzig eSports e.V.}
+\cfoot{\thepage}
+
+
+% Environments
+
+% Command
+\newcommand{\logo}[1]{\includegraphics[width=#1]{Logo.pdf}}
+\renewcommand*{\maketitle}{%
+	\begin{titlepage}
+		\centering
+		\logo{8cm}
+		\par
+		\vspace{1cm}
+	{\LARGE \thetitle \par}
+		\vspace{1cm}
+	{\Large \theauthor \par}
+		\vspace{3cm}
+	{\thedate \par}
+	\end{titlepage}
+}
+
+\begin{document}
+\maketitle
+\input{content.tex}
+\end{document}
